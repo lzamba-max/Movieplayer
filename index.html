@@ -1,87 +1,74 @@
+
+ 
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+▾
+▾
+▾
+▾
+▾
+▾
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Base64 Login Demo</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-    }
-    .login-box {
-      width: 300px;
-      padding: 20px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .field {
-      margin-bottom: 15px;
-    }
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
-    input {
-      width: 100%;
-      padding: 8px;
-      box-sizing: border-box;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-    .result {
-      margin-top: 15px;
-      word-break: break-all;
-      background: #f4f4f4;
-      padding: 10px;
-      border-radius: 3px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Video Player</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        iframe {
+            width: 800px;
+            height: 450px;
+            max-width: 90vw;
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+    </style>
 </head>
 <body>
 
-  <div class="login-box">
-    <h2>Login</h2>
-    <form id="loginForm">
-      <div class="field">
-        <label for="username">Username</label>
-        <input type="text" id="username" required>
-      </div>
-
-      <div class="field">
-        <label for="password">Password</label>
-        <input type="password" id="password" required>
-      </div>
-
-      <button type="submit">Login</button>
-    </form>
-
-    <div class="result" id="output">Base64 output will appear here...</div>
-  </div>
-
-  <script>
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault(); // Prevents page reload
-
-      const user = document.getElementById('username').value;
-      const pass = document.getElementById('password').value;
-
-      // Combine credentials format (username:password)
-      const credentials = user + ":" + pass;
-
-      // btoa() converts string into Base64 format
-      const base64Encoded = btoa(credentials);
-
-      // Display the output
-      document.getElementById('output').innerHTML = "<strong>Base64 Encoded:</strong><br>" + base64Encoded;
-    });
-  </script>
+    <!-- Replace YOUR_FILE_ID_HERE with your Google Drive File ID -->
+    <iframe src="https://drive.google.com/file/d/1B4HOmJuhxDkTWoEBznKi09p1MmaE_LXd/preview" allow="autoplay" allowfullscreen></iframe>
 
 </body>
 </html>
